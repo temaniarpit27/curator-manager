@@ -1,0 +1,4 @@
+{
+  "vault-core": { "aave": 6000, "spark": 2500 },
+  "vault-yield": { "aave": 5000, "morpho": 4000, "ether-fi": 1000 }
+}

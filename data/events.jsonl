@@ -1,0 +1,24 @@
+{"event": {"block": 1, "log_index": 0, "kind": "VaultCreated", "vault": "vault-core", "data": {"decimals": 6}}}
+{"event": {"block": 1, "log_index": 1, "kind": "VaultCreated", "vault": "vault-yield", "data": {"decimals": 6}}}
+{"event": {"block": 2, "log_index": 0, "kind": "SetCap", "vault": "vault-core", "data": {"strategy": "aave", "cap": 200000000000}}}
+{"event": {"block": 2, "log_index": 1, "kind": "SetCap", "vault": "vault-core", "data": {"strategy": "spark", "cap": 30000000000}}}
+{"event": {"block": 2, "log_index": 2, "kind": "SetCap", "vault": "vault-yield", "data": {"strategy": "aave", "cap": 500000000000}}}
+{"event": {"block": 2, "log_index": 3, "kind": "SetCap", "vault": "vault-yield", "data": {"strategy": "morpho", "cap": 250000000000}}}
+{"event": {"block": 3, "log_index": 0, "kind": "Accrue", "vault": "vault-core", "data": {"assets": 500000000}}}
+{"event": {"block": 4, "log_index": 0, "kind": "Deposit", "vault": "vault-core", "data": {"user": "alice", "assets": 100000000000, "shares": 100000000000}}}
+{"event": {"block": 5, "log_index": 0, "kind": "Deposit", "vault": "vault-core", "data": {"user": "bob", "assets": 50000000000, "shares": 49751243781}}}
+{"event": {"block": 6, "log_index": 0, "kind": "Accrue", "vault": "vault-core", "data": {"assets": 1500000000}}}
+{"event": {"block": 7, "log_index": 0, "kind": "Allocate", "vault": "vault-core", "data": {"strategy": "aave", "assets": 130000000000}}}
+{"event": {"block": 9, "log_index": 0, "kind": "Allocate", "vault": "vault-yield", "data": {"strategy": "morpho", "assets": 240000000000}}}
+{"event": {"block": 8, "log_index": 0, "kind": "Deposit", "vault": "vault-yield", "data": {"user": "alice", "assets": 300000000000, "shares": 300000000000}}}
+{"event": {"block": 10, "log_index": 0, "kind": "Accrue", "vault": "vault-yield", "data": {"assets": 3000000000}}}
+{"event": {"block": 11, "log_index": 0, "kind": "SetCap", "vault": "vault-yield", "data": {"strategy": "morpho", "cap": 200000000000}}}
+{"event": {"block": 12, "log_index": 0, "kind": "Deposit", "vault": "vault-yield", "data": {"user": "erin", "assets": 100000000000, "shares": 99009900990}}}
+{"event": {"block": 13, "log_index": 0, "kind": "Allocate", "vault": "vault-yield", "data": {"strategy": "aave", "assets": 80000000000}}}
+{"event": {"block": 5, "log_index": 0, "kind": "Deposit", "vault": "vault-core", "data": {"user": "bob", "assets": 50000000000, "shares": 49751243781}}}
+{"event": {"block": 15, "log_index": 0, "kind": "Withdraw", "vault": "vault-core", "data": {"user": "bob", "assets": 20000000000, "shares": 19704111024}}}
+{"event": {"block": 14, "log_index": 0, "kind": "Deposit", "vault": "vault-legacy", "data": {"user": "frank", "assets": 1000000000, "shares": 1000000000}}}
+{"event": {"block": 16, "log_index": 0, "kind": "Deposit", "vault": "vault-core", "data": {"user": "grace", "assets": 500000000000, "shares": 492602775594}}}
+{"reorg": {"from_block": 16}}
+{"event": {"block": 16, "log_index": 0, "kind": "Deposit", "vault": "vault-core", "data": {"user": "grace", "assets": 50000000000, "shares": 49260277559}}}
+{"event": {"block": 17, "log_index": 0, "kind": "Accrue", "vault": "vault-core", "data": {"assets": 2000000000}}}
