@@ -1,0 +1,5 @@
+# Build with the current stable Rust (developed and tested on 1.99.0);
+# rustup adds rustfmt and clippy if they are missing.
+[toolchain]
+channel = "stable"
+components = ["rustfmt", "clippy"]
