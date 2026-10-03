@@ -1,0 +1,4 @@
+{"event": {"block": 1, "log_index": 0, "kind": "VaultCreated", "vault": "vault-core", "data": {"decimals": 6}}}
+{"event": {"block": 2, "log_index": 0, "kind": "Deposit", "vault": "vault-core", "data": {"user": "alice", "assets": 10000000000, "shares": 10000000000}}}
+{"event": {"block": 3, "log_index": 0, "kind": "Withdraw", "vault": "vault-core", "data": {"user": "alice", "assets": 50000000000, "shares": 50000000000}}}
+{"event": {"block": 4, "log_index": 0, "kind": "Deposit", "vault": "vault-core", "data": {"user": "alice", "assets": 5000000000, "shares": 5000000000}}}

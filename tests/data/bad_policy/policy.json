@@ -1,0 +1,9 @@
+{
+  "vault-core": {
+    "aave": 6000,
+    "spark": 5000
+  },
+  "vault-other": {
+    "aave": 20000
+  }
+}

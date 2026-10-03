@@ -1,0 +1,1 @@
+{"event": {"block": 2, "log_index": 0, "kind": "Deposit", "vault": "vault-core", "data": {"user": "alice", "assets": 100000000000, "shares": 100000000000}}}

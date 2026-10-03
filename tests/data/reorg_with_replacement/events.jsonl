@@ -1,0 +1,10 @@
+{"event": {"block": 1, "log_index": 0, "kind": "VaultCreated", "vault": "vault-core", "data": {"decimals": 6}}}
+{"event": {"block": 1, "log_index": 1, "kind": "SetCap", "vault": "vault-core", "data": {"strategy": "aave", "cap": 600000000000}}}
+{"event": {"block": 1, "log_index": 2, "kind": "SetCap", "vault": "vault-core", "data": {"strategy": "spark", "cap": 300000000000}}}
+{"event": {"block": 2, "log_index": 0, "kind": "Deposit", "vault": "vault-core", "data": {"user": "alice", "assets": 400000000000, "shares": 400000000000}}}
+{"event": {"block": 8, "log_index": 0, "kind": "Accrue", "vault": "vault-core", "data": {"assets": 5000000000}}}
+{"event": {"block": 12, "log_index": 0, "kind": "Deposit", "vault": "vault-core", "data": {"user": "carol", "assets": 50000000000, "shares": 49000000000}}}
+{"event": {"block": 12, "log_index": 1, "kind": "Allocate", "vault": "vault-core", "data": {"strategy": "spark", "assets": 100000000000}}}
+{"reorg": {"from_block": 12}}
+{"event": {"block": 12, "log_index": 0, "kind": "Deposit", "vault": "vault-core", "data": {"user": "carol", "assets": 40000000000, "shares": 39200000000}}}
+{"event": {"block": 13, "log_index": 0, "kind": "Withdraw", "vault": "vault-core", "data": {"user": "alice", "assets": 20000000000, "shares": 19800000000}}}

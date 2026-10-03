@@ -1,0 +1,8 @@
+{
+  "vault-core": {
+    "aave": 4000,
+    "morpho": 3000,
+    "spark": 2000,
+    "ether-fi": 1000
+  }
+}

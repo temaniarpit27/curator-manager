@@ -1,0 +1,5 @@
+{"event": {"block": 1, "log_index": 0, "kind": "VaultCreated", "vault": "vault-core", "data": {"decimals": 6}}}
+{"event": {"block": 1, "log_index": 1, "kind": "SetCap", "vault": "vault-core", "data": {"strategy": "aave", "cap": 1000000000000}}}
+{"event": {"block": 2, "log_index": 0, "kind": "Deposit", "vault": "vault-core", "data": {"user": "alice", "assets": 100000000000, "shares": 100000000000}}}
+{"event": {"block": 3, "log_index": 0, "kind": "Withdraw", "vault": "vault-core", "data": {"user": "alice", "assets": 0, "shares": 1}}}
+{"event": {"block": 4, "log_index": 0, "kind": "Deposit", "vault": "vault-core", "data": {"user": "bob", "assets": 1, "shares": 0}}}
