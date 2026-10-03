@@ -1,0 +1,61 @@
+name: CI
+
+# Every step runs a Makefile target, so CI and a local `make` do the same thing.
+
+on:
+  push:
+  pull_request:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  lint:
+    name: Format and lints
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Stable, matching rust-toolchain.toml.
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+      - name: Format
+        run: make fmt-check
+      - name: Clippy
+        run: make lint
+
+  test:
+    name: Build and test (${{ matrix.os }}, ${{ matrix.profile }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        profile: [dev, release]
+    env:
+      PROFILE: ${{ matrix.profile }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          key: ${{ matrix.profile }}
+      - name: Compile
+        run: make build
+      - name: Unit tests
+        run: make test-unit
+      - name: Integration tests
+        run: make test-integration
+      - name: Run on the supplied data
+        run: make smoke
+
+  docker:
+    name: Docker image
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the image
+        run: make docker-build
+      - name: Run the image on the supplied data
+        run: make docker-smoke
