@@ -6,4 +6,6 @@
 //! [`vault`]; [`run`] decides which vaults to plan with [`planner`] and
 //! [`policy`]; [`report`] holds and prints the result.
 
+pub mod event;
+pub mod feed;
 pub mod types;
