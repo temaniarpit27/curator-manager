@@ -9,6 +9,7 @@
 pub mod engine;
 pub mod event;
 pub mod feed;
+pub mod planner;
 pub mod policy;
 pub mod types;
 pub mod vault;
