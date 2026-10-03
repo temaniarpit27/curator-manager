@@ -8,5 +8,6 @@
 
 pub mod event;
 pub mod feed;
+pub mod policy;
 pub mod types;
 pub mod vault;
