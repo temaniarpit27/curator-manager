@@ -9,3 +9,4 @@
 pub mod event;
 pub mod feed;
 pub mod types;
+pub mod vault;
