@@ -1,3 +1,41 @@
+# Curator vault manager: submission
+
+Needs a recent stable Rust (edition 2024; developed on 1.99.0).
+`rust-toolchain.toml` selects the stable channel with rustfmt and clippy.
+Tested on macOS and Ubuntu.
+
+```bash
+cargo run     # reads data/events.jsonl and data/policy.json, prints state and plans
+cargo test    # unit and integration tests
+```
+
+Or with `make` (`make help` lists every target):
+
+```bash
+make run      # same as cargo run
+make check    # formatting, clippy, unit and integration tests
+```
+
+Or with Docker, without installing Rust:
+
+```bash
+make docker-build   # or: docker build -t curator-manager .
+make docker-run     # or: docker run --rm curator-manager
+```
+
+CI (`.github/workflows/ci.yml`) runs the same `make` targets on Ubuntu and
+macOS, in debug and release, and builds and runs the Docker image.
+
+Each vault is shown as planned, or not planned with the reasons why. In the
+given data `vault-legacy` has a deposit but no `VaultCreated`, and no policy
+entry, so it is not planned, while `vault-core` and `vault-yield` are
+planned in full.
+
+Design decisions, assumptions, limitations, tests and the Part 2 write-up are
+in [NOTES.md](NOTES.md). The original brief follows, unchanged.
+
+---
+
 # Curator vault management system
 
 We are a curator for a set of onchain vaults (two at the moment). Our job is to
