@@ -8,8 +8,10 @@
 
 pub mod engine;
 pub mod event;
-pub mod feed;
+mod feed;
 pub mod planner;
 pub mod policy;
+pub mod report;
+pub mod run;
 pub mod types;
 pub mod vault;
